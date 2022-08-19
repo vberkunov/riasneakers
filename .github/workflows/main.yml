@@ -28,11 +28,7 @@ jobs:
         reporter: 'github-pr-check'
         tool_name: 'testtool'
   
-    - name: CheckStyle
-      run: mvn -B verify checkstyle:checkstyle
-    - uses: jwgmeligmeyling/checkstyle-github-action@master
-      with:
-        path: '**/checkstyle-result.xml'
+
       
     - name: PMD 
       run: mvn -B verify pmd:pmd
